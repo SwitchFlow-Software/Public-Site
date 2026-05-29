@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — SwitchFlow</title>
+  <meta name="description" content="Get in touch with SwitchFlow. Request a demo or ask about bringing switch order management to your utility.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ======================== NAV ======================== -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">⚡</div>
+        <span class="logo-text">SWITCHFLOW</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html#features"     class="nav-link">Features</a>
+        <a href="index.html#how-it-works" class="nav-link">How It Works</a>
+        <a href="index.html#roles"        class="nav-link">Who It's For</a>
+        <a href="contact.html"            class="nav-link active">Contact</a>
+      </div>
+      <a href="contact.html" class="btn btn-primary nav-cta">Request Demo</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="navMobile">
+      <a href="index.html#features"     class="nav-mobile-link">Features</a>
+      <a href="index.html#how-it-works" class="nav-mobile-link">How It Works</a>
+      <a href="index.html#roles"        class="nav-mobile-link">Who It's For</a>
+      <a href="contact.html"            class="nav-mobile-link">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ======================== CONTACT HERO ======================== -->
+  <div class="contact-hero">
+    <div class="container">
+      <div class="section-label">GET IN TOUCH</div>
+      <h1>Let's talk about your team.</h1>
+      <p>Tell us about your utility and we'll show you how SwitchFlow can fit into your operations. No pressure — just a conversation.</p>
+    </div>
+  </div>
+
+  <!-- ======================== CONTACT SECTION ======================== -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Left: Info -->
+        <div class="contact-info">
+          <h2>We'd love to hear from you.</h2>
+          <p>Whether you're ready to deploy or just exploring options, our team is happy to walk you through what SwitchFlow can do for your crew.</p>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon">📬</div>
+            <div class="contact-detail-text">
+              <label>Email</label>
+              <span>Coming soon</span>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon">⚡</div>
+            <div class="contact-detail-text">
+              <label>Product</label>
+              <span>SwitchFlow OPS &mdash; Switch Order Management</span>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon">🕐</div>
+            <div class="contact-detail-text">
+              <label>Response Time</label>
+              <span>We typically respond within one business day.</span>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon">🛡️</div>
+            <div class="contact-detail-text">
+              <label>Privacy</label>
+              <span>Your information is never shared or sold. We only use it to follow up with you.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Form -->
+        <div class="contact-form-card">
+          <h3>Request a Demo</h3>
+          <p>Fill out the form below and we'll reach out to schedule a time that works for you.</p>
+
+          <form id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name <span style="color:var(--accent-light)">*</span></label>
+                <input type="text" id="firstName" name="firstName" placeholder="Jane" required>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name <span style="color:var(--accent-light)">*</span></label>
+                <input type="text" id="lastName" name="lastName" placeholder="Smith" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Work Email <span style="color:var(--accent-light)">*</span></label>
+              <input type="email" id="email" name="email" placeholder="you@company.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="company">Company / Utility Name <span style="color:var(--accent-light)">*</span></label>
+              <input type="text" id="company" name="company" placeholder="Acme Electric Co." required>
+            </div>
+
+            <div class="form-group">
+              <label for="teamSize">Approximate Team Size</label>
+              <select id="teamSize" name="teamSize">
+                <option value="" disabled selected>Select a range</option>
+                <option value="1-10">1 – 10 people</option>
+                <option value="11-50">11 – 50 people</option>
+                <option value="51-200">51 – 200 people</option>
+                <option value="200+">200+ people</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">What can we help you with?</label>
+              <textarea id="message" name="message" placeholder="Tell us a bit about your current switching process or any questions you have&hellip;"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary form-submit">Send Message &rarr;</button>
+          </form>
+
+          <!-- Success state -->
+          <div class="form-success" id="formSuccess">
+            <div class="success-icon">✅</div>
+            <h3>Message received!</h3>
+            <p>Thanks for reaching out. We'll be in touch within one business day to set up a time to chat.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== FOOTER ======================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">⚡</div>
+          <span class="logo-text">SWITCHFLOW</span>
+        </a>
+        <p class="footer-copy">&copy; 2026 SwitchFlow Software. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="index.html#features">Features</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
