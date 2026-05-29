@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SwitchFlow — Switch Order Management for Utilities</title>
+  <meta name="description" content="Plan, approve, and execute switching with one source of truth. Coordinated step-by-step procedures for utility crews.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ======================== NAV ======================== -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">⚡</div>
+        <span class="logo-text">SWITCHFLOW</span>
+      </a>
+      <div class="nav-links">
+        <a href="#features"     class="nav-link">Features</a>
+        <a href="#how-it-works" class="nav-link">How It Works</a>
+        <a href="#roles"        class="nav-link">Who It's For</a>
+        <a href="contact.html"  class="nav-link">Contact</a>
+      </div>
+      <a href="contact.html" class="btn btn-primary nav-cta">Request Demo</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="navMobile">
+      <a href="#features"     class="nav-mobile-link">Features</a>
+      <a href="#how-it-works" class="nav-mobile-link">How It Works</a>
+      <a href="#roles"        class="nav-mobile-link">Who It's For</a>
+      <a href="contact.html"  class="nav-mobile-link">Contact</a>
+      <a href="contact.html"  class="btn btn-primary" style="justify-content:center;margin-top:0.5rem;">Request Demo</a>
+    </div>
+  </nav>
+
+  <!-- ======================== HERO ======================== -->
+  <section class="hero">
+    <!-- Circuit line background matching the app login page -->
+    <div class="hero-bg">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" preserveAspectRatio="xMidYMid slice">
+        <g stroke="#3b82f6" stroke-width="1" fill="none">
+          <!-- Horizontal bus lines -->
+          <line x1="0"    y1="220" x2="1400" y2="220"/>
+          <line x1="0"    y1="580" x2="1400" y2="580"/>
+          <!-- Vertical drops -->
+          <line x1="130"  y1="0"   x2="130"  y2="220"/>
+          <line x1="130"  y1="580" x2="130"  y2="900"/>
+          <line x1="400"  y1="220" x2="400"  y2="580"/>
+          <line x1="700"  y1="0"   x2="700"  y2="220"/>
+          <line x1="700"  y1="580" x2="700"  y2="900"/>
+          <line x1="1000" y1="220" x2="1000" y2="580"/>
+          <line x1="1280" y1="0"   x2="1280" y2="220"/>
+          <line x1="1280" y1="580" x2="1280" y2="900"/>
+          <!-- Junction nodes -->
+          <circle cx="130"  cy="220" r="4.5"/>
+          <circle cx="400"  cy="220" r="4.5"/>
+          <circle cx="700"  cy="220" r="4.5"/>
+          <circle cx="1000" cy="220" r="4.5"/>
+          <circle cx="1280" cy="220" r="4.5"/>
+          <circle cx="130"  cy="580" r="4.5"/>
+          <circle cx="400"  cy="580" r="4.5"/>
+          <circle cx="700"  cy="580" r="4.5"/>
+          <circle cx="1000" cy="580" r="4.5"/>
+          <circle cx="1280" cy="580" r="4.5"/>
+          <!-- Switch symbols (diamond) -->
+          <polygon points="400,385 416,400 400,415 384,400"/>
+          <polygon points="1000,385 1016,400 1000,415 984,400"/>
+          <!-- Ground symbols -->
+          <line x1="130" y1="0"  x2="130" y2="28"/>
+          <line x1="112" y1="28" x2="148" y2="28"/>
+          <line x1="119" y1="35" x2="141" y2="35"/>
+          <line x1="126" y1="42" x2="134" y2="42"/>
+          <line x1="700" y1="0"  x2="700" y2="28"/>
+          <line x1="682" y1="28" x2="718" y2="28"/>
+          <line x1="689" y1="35" x2="711" y2="35"/>
+          <line x1="696" y1="42" x2="704" y2="42"/>
+        </g>
+      </svg>
+    </div>
+
+    <div class="hero-inner">
+      <!-- Left: Copy -->
+      <div class="hero-content">
+        <div class="hero-badge">SWITCH ORDER MANAGEMENT</div>
+        <h1 class="hero-title">Plan, approve, and execute switching with one source of truth.</h1>
+        <p class="hero-subtitle">Coordinated step-by-step procedures for utility crews. Built for operators, viewed by everyone.</p>
+        <div class="hero-actions">
+          <a href="contact.html" class="btn btn-primary btn-lg">Request a Demo &rarr;</a>
+          <a href="#features"    class="btn btn-ghost   btn-lg">See Features</a>
+        </div>
+      </div>
+
+      <!-- Right: App mockup -->
+      <div class="hero-mockup">
+        <div class="mockup-window">
+
+          <!-- Title bar -->
+          <div class="mockup-titlebar">
+            <div class="mockup-logo">
+              <div class="mockup-logo-icon">⚡</div>
+              <span>SWITCHFLOW</span>
+              <span class="mockup-version">&nbsp;OPS &middot; v2.4</span>
+            </div>
+            <div class="mockup-nav">
+              <span>My Orders</span>
+              <span class="active">Orders</span>
+              <span>Archives</span>
+              <span>Teams</span>
+            </div>
+          </div>
+
+          <!-- Body -->
+          <div class="mockup-body">
+            <div class="mockup-header-label">OPERATIONS</div>
+            <div class="mockup-header-title">Switch Orders</div>
+
+            <div class="mockup-stats">
+              <div class="mockup-stat">
+                <span class="mockup-stat-num">12</span>
+                <span class="mockup-stat-label">TOTAL</span>
+              </div>
+              <div class="mockup-stat">
+                <span class="mockup-stat-num">5</span>
+                <span class="mockup-stat-label">DRAFT</span>
+              </div>
+              <div class="mockup-stat">
+                <span class="mockup-stat-num">4</span>
+                <span class="mockup-stat-label">APPROVED</span>
+              </div>
+              <div class="mockup-stat">
+                <span class="mockup-stat-num">3</span>
+                <span class="mockup-stat-label">COMPLETE</span>
+              </div>
+            </div>
+
+            <div class="mockup-toolbar">
+              <div class="mockup-search">&#128269; Search by order #, name, requester&hellip;</div>
+              <div class="mockup-filters">
+                <span class="mockup-filter active">All</span>
+                <span class="mockup-filter">Draft</span>
+                <span class="mockup-filter">Approved</span>
+              </div>
+              <span class="mockup-new-btn">+ New order</span>
+            </div>
+
+            <table class="mockup-table">
+              <thead>
+                <tr>
+                  <th>ORDER #</th>
+                  <th>NAME</th>
+                  <th>REQUESTED BY</th>
+                  <th>STATUS</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="mockup-order-num">0528-2026-1940</td>
+                  <td class="mockup-name">1053 Change Out Order</td>
+                  <td>J. Arthington</td>
+                  <td>
+                    <div class="mockup-status">
+                      <span class="mockup-dot draft"></span> DRAFT
+                    </div>
+                  </td>
+                  <td>
+                    <div class="mockup-actions">
+                      <span class="mockup-approve-btn">Approve</span>
+                      <span class="mockup-delete-btn">Delete</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="mockup-order-num">0522-2026-1887</td>
+                  <td class="mockup-name">Feeder 12 Maintenance</td>
+                  <td>T. Wallace</td>
+                  <td>
+                    <div class="mockup-status">
+                      <span class="mockup-dot approved"></span> APPROVED
+                    </div>
+                  </td>
+                  <td><span class="mockup-open-link">Open &rsaquo;</span></td>
+                </tr>
+                <tr>
+                  <td class="mockup-order-num">0519-2026-1822</td>
+                  <td class="mockup-name">Substation 7 Switching</td>
+                  <td>R. Montoya</td>
+                  <td>
+                    <div class="mockup-status">
+                      <span class="mockup-dot complete"></span> COMPLETE
+                    </div>
+                  </td>
+                  <td><span class="mockup-open-link">Open &rsaquo;</span></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="mockup-footer-row">
+              <span>SHOWING 3 OF 12 &middot; LAST SYNC 0S AGO</span>
+              <span>SORT: START DATE &darr;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== FEATURES ======================== -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-label">WHY SWITCHFLOW</div>
+      <h2 class="section-title">Everything your team needs to execute switching safely.</h2>
+      <p class="section-subtitle">From initial request to final step sign-off — SwitchFlow keeps every crew member aligned and every action documented.</p>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">📋</div>
+          <h3>Structured Switch Orders</h3>
+          <p>Create detailed switch orders with circuits, steps, and safety procedures. Every action is documented before it happens.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">✅</div>
+          <h3>Approval Workflows</h3>
+          <p>Draft, review, and approve orders before crews take the field. A full audit trail from submission to execution.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">👥</div>
+          <h3>Team Collaboration</h3>
+          <p>Assign orders and individual steps to teams or specific crew members. Everyone knows their role and next action.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📡</div>
+          <h3>Live Status Tracking</h3>
+          <p>Monitor order status in real time — Draft, Approved, In Progress, or Complete. No radio calls needed to know where things stand.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔒</div>
+          <h3>Role-Based Access</h3>
+          <p>Admins, Operators, and Viewers each see exactly what they need. Sensitive controls stay protected from unintended changes.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🗂️</div>
+          <h3>Archive &amp; Reporting</h3>
+          <p>Completed orders are archived automatically with full timestamps. Export for compliance reviews or search historical records at any time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== HOW IT WORKS ======================== -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="container">
+      <div class="section-label">HOW IT WORKS</div>
+      <h2 class="section-title">From request to execution in four steps.</h2>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h3>Create the Order</h3>
+          <p>An operator or dispatcher creates a switch order, defines the circuits involved, and writes out each step of the switching procedure.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h3>Review &amp; Approve</h3>
+          <p>A supervisor reviews the order for safety and accuracy, then approves it so crews can proceed with full confidence and authorization.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h3>Execute in the Field</h3>
+          <p>Assigned crews execute each step in sequence, marking completion as they go. The entire team sees live progress from any device.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <h3>Archive &amp; Comply</h3>
+          <p>Completed orders are automatically archived with full timestamps and sign-offs — ready for audits, NERC compliance, or future reference.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== ROLES ======================== -->
+  <section class="roles" id="roles">
+    <div class="container">
+      <div class="section-label">BUILT FOR EVERYONE</div>
+      <h2 class="section-title">One platform, every role.</h2>
+      <p class="section-subtitle">SwitchFlow is designed around how utility teams actually work — from the control room to the field.</p>
+
+      <div class="roles-grid">
+        <div class="role-card">
+          <div class="role-badge badge-admin">ADMIN</div>
+          <h3>System Administrators</h3>
+          <p>Full control over users, teams, roles, and system configuration. Manage access, onboard new crew members, and audit everything.</p>
+        </div>
+        <div class="role-card">
+          <div class="role-badge badge-operator">OPERATOR</div>
+          <h3>Operators &amp; Dispatchers</h3>
+          <p>Create and manage switch orders, assign crews, track real-time progress, and ensure procedures are followed step by step.</p>
+        </div>
+        <div class="role-card">
+          <div class="role-badge badge-viewer">VIEWER</div>
+          <h3>Supervisors &amp; Stakeholders</h3>
+          <p>Read-only visibility into all active orders and assignments. Stay fully informed without the risk of unintended changes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== CTA ======================== -->
+  <section class="cta">
+    <div class="container">
+      <div class="cta-inner">
+        <div class="section-label">GET STARTED</div>
+        <h2>Ready to bring order to your switching operations?</h2>
+        <p>See how SwitchFlow can work for your utility. Request a personalized demo with our team today.</p>
+        <div class="cta-actions">
+          <a href="contact.html" class="btn btn-primary btn-lg">Request a Demo &rarr;</a>
+          <a href="contact.html" class="btn btn-ghost   btn-lg">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== FOOTER ======================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">⚡</div>
+          <span class="logo-text">SWITCHFLOW</span>
+        </a>
+        <p class="footer-copy">&copy; 2026 SwitchFlow Software. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#features">Features</a>
+          <a href="contact.html">Contact</a>
+          <a href="contact.html">Request Demo</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
