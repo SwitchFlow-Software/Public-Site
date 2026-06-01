@@ -1,5 +1,7 @@
-// Initialize EmailJS
-emailjs.init('AuAQoAZaoepDhYweJ');
+// Initialize EmailJS (only if library is loaded)
+if (typeof emailjs !== 'undefined') {
+  emailjs.init('AuAQoAZaoepDhYweJ');
+}
 
 // Mobile nav toggle
 const navToggle = document.getElementById('navToggle');
