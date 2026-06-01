@@ -65,14 +65,26 @@ if (contactForm && formSuccess) {
       message: data.message,
     };
 
+    // Send auto-reply params
+    const autoReplyParams = {
+      to_email: data.email,
+      from_name: `${data.firstName} ${data.lastName}`,
+    };
+
     // Disable submit button while sending
     const submitBtn = contactForm.querySelector('.form-submit');
     submitBtn.disabled = true;
     submitBtn.textContent = 'Sending...';
 
-    emailjs.send('service_nc7dx4f', 'template_1p2a1i5', templateParams)
+    // Send to team first, then auto-reply to user
+    emailjs.send('service_nc7dx4f', 'template_44xtv2k', templateParams)
       .then((response) => {
-        console.log('Email sent successfully!', response);
+        console.log('Email sent to team!', response);
+        // Now send auto-reply to user
+        return emailjs.send('service_nc7dx4f', 'template_1p2a1i5', autoReplyParams);
+      })
+      .then((response) => {
+        console.log('Auto-reply sent to user!', response);
         // Show success message
         contactForm.style.display = 'none';
         formSuccess.style.display = 'block';
