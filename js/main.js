@@ -70,8 +70,8 @@ if (contactForm && formSuccess) {
     submitBtn.disabled = true;
     submitBtn.textContent = 'Sending...';
 
-    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
-      .then((resposervice_nc7dx4f', 'template_1p2a1i5
+    emailjs.send('service_nc7dx4f', 'template_1p2a1i5', templateParams)
+      .then((response) => {
         console.log('Email sent successfully!', response);
         // Show success message
         contactForm.style.display = 'none';
