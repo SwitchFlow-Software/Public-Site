@@ -1,3 +1,6 @@
+// Initialize EmailJS
+emailjs.init('AuAQoAZaoepDhYweJ');
+
 // Mobile nav toggle
 const navToggle = document.getElementById('navToggle');
 const navMobile = document.getElementById('navMobile');
@@ -20,8 +23,7 @@ window.addEventListener('resize', () => {
   }
 });
 
-// Contact form — show success state on submit
-// Replace this handler with your backend/email integration when ready
+// Contact form — send emails via EmailJS
 const contactForm = document.getElementById('contactForm');
 const formSuccess = document.getElementById('formSuccess');
 
@@ -43,7 +45,7 @@ if (contactForm && formSuccess) {
 
     if (!valid) return;
 
-    // Collect form data (wire up to your email service here)
+    // Collect form data
     const data = {
       firstName: contactForm.firstName.value.trim(),
       lastName:  contactForm.lastName.value.trim(),
@@ -53,11 +55,34 @@ if (contactForm && formSuccess) {
       message:   contactForm.message.value.trim(),
     };
 
-    console.log('Form submission:', data);
+    // Send email via EmailJS
+    const templateParams = {
+      to_email: 'spencer.skaggs@switchflowsoftware.com, tanner.cantlay@switchflowsoftware.com',
+      from_name: `${data.firstName} ${data.lastName}`,
+      from_email: data.email,
+      company: data.company,
+      team_size: data.teamSize || 'Not specified',
+      message: data.message,
+    };
 
-    // Show success message
-    contactForm.style.display = 'none';
-    formSuccess.style.display = 'block';
+    // Disable submit button while sending
+    const submitBtn = contactForm.querySelector('.form-submit');
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+
+    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+      .then((resposervice_nc7dx4f', 'template_1p2a1i5
+        console.log('Email sent successfully!', response);
+        // Show success message
+        contactForm.style.display = 'none';
+        formSuccess.style.display = 'block';
+      })
+      .catch((error) => {
+        console.error('Failed to send email:', error);
+        alert('Failed to send message. Please try again or email us directly.');
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Message →';
+      });
   });
 
   // Clear red border on input
